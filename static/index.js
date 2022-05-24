@@ -26,7 +26,7 @@ socket.on('ihm', function(dataServ) {
         let div_1 = document.getElementById("div_1");
         let p = document.createElement("p");
         let txt = document.createTextNode(dataServ["btn"]);
-        p.classList.add(dataServ["btn"])
+        p.classList.add(dataServ["btn"]+"_error")
         p.appendChild(txt);
         div_1.appendChild(p);
     }

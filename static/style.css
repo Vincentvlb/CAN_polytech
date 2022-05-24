@@ -29,3 +29,15 @@ table
 .Bleu{
     background-color: blue;
 }
+
+.Jaune_error{
+    color: purple;
+}
+
+.Vert_error{
+    color:blue;
+}
+
+.Bleu_error{
+    color:chartreuse;
+}
