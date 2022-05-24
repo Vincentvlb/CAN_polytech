@@ -30,5 +30,37 @@ socket.on('ihm', function(dataServ) {
         p.appendChild(txt);
         div_1.appendChild(p);
     }
+    if("couleur" in dataServ){
+        let div_5 = document.getElementById("div_5");
+        let p = document.createElement("div");
+        p.classList.add(dataServ["couleur"])
+        p.classList.add("couleur")
+        div_5.appendChild(p);
+    }
+    if("vitesse" in dataServ){
+        let div_4 = document.getElementById("div_4");
+        let p = document.createElement("p");
+        let txt = document.createTextNode(dataServ["vitesse"]);
+        p.appendChild(txt);
+        div_4.appendChild(p);
+    }
+    if("force" in dataServ){
+        let div_6 = document.getElementById("div_6");
+        let p = document.createElement("p");
+        let txt = document.createTextNode(dataServ["force"]+" %");
+        p.appendChild(txt);
+        div_6.appendChild(p);
+    }
+    if("msg_look" in dataServ){
+        let regardez = document.getElementById("regardez");
+        let avdj = document.getElementById("avdj");
+        if(dataServ["msg_look"]){
+            regardez.style.display = null; 
+            avdj.style.display = "none";
+        }else{
+            avdj.style.display = null;  
+            regardez.style.display = "none";
+        }
+    }
     console.log(dataServ)
 });

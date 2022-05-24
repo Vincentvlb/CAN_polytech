@@ -17,6 +17,11 @@ class WebServer:
     def __index(self):
         return render_template("index.html")
 
+    def resultat_capteur():
+        pass
+
+    def resultat_jeu():
+        pass
 
 def main():
     webServer = WebServer()
@@ -24,9 +29,35 @@ def main():
     while True :
         webServer.socketio.emit('ihm', {"joystick":"N"} , namespace='/ihm')
         time.sleep(1)
-        webServer.socketio.emit('ihm', {"btn":"Rouge"} , namespace='/ihm')
+        webServer.socketio.emit('ihm', {"joystick":"S"} , namespace='/ihm')
         time.sleep(1)
-        webServer.socketio.emit('ihm', {"btn":"Bleu"} , namespace='/ihm')
+        webServer.socketio.emit('ihm', {"joystick":"E"} , namespace='/ihm')
+        time.sleep(1)
+        webServer.socketio.emit('ihm', {"joystick":"O"} , namespace='/ihm')
+        time.sleep(1)
+        webServer.socketio.emit('ihm', {"btn":"Appuyez"} , namespace='/ihm')
+        time.sleep(1)
+        webServer.socketio.emit('ihm', {"couleur":"Blanc"} , namespace='/ihm')
+        time.sleep(1)
+        webServer.socketio.emit('ihm', {"couleur":"Rouge"} , namespace='/ihm')
+        time.sleep(1)
+        webServer.socketio.emit('ihm', {"couleur":"Vert"} , namespace='/ihm')
+        time.sleep(1)
+        webServer.socketio.emit('ihm', {"couleur":"Bleu"} , namespace='/ihm')
+        time.sleep(1)
+        webServer.socketio.emit('ihm', {"vitesse":"Lent"} , namespace='/ihm')
+        time.sleep(1)
+        webServer.socketio.emit('ihm', {"vitesse":"Rapide"} , namespace='/ihm')
+        time.sleep(1)
+        webServer.socketio.emit('ihm', {"force":50} , namespace='/ihm')
+        time.sleep(1)
+        webServer.socketio.emit('ihm', {"force":20} , namespace='/ihm')
+        time.sleep(1)
+        webServer.socketio.emit('ihm', {"msg_look":True} , namespace='/ihm')
+        time.sleep(1)
+        webServer.socketio.emit('ihm', {"msg_look":False} , namespace='/ihm')
+        time.sleep(1)
+        webServer.socketio.emit('ihm', {"msg_look":True} , namespace='/ihm')
         time.sleep(1)
 
 if __name__ == "__main__":

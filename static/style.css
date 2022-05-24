@@ -6,10 +6,26 @@ table
     text-align: center;
 }
 
+.Appuyez{
+    color: purple;
+}
+
+.couleur{
+    border: solid black;
+    height: 25px;
+    width: 25px;
+    margin: auto;
+    border-radius: 25px;
+}
+
 .Rouge{
-    color: red;
+    background-color: red;
+}
+
+.Vert{
+    background-color: green;
 }
 
 .Bleu{
-    color: blue;
+    background-color: blue;
 }
