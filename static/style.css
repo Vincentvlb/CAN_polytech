@@ -1,0 +1,31 @@
+td {border: 1px solid black;}
+table
+{border-collapse: collapse;}
+
+#div_1, #div_2, #div_3, #div_4, #div_5, #div_6{
+    text-align: center;
+}
+
+.Appuyez{
+    color: purple;
+}
+
+.couleur{
+    border: solid black;
+    height: 25px;
+    width: 25px;
+    margin: auto;
+    border-radius: 25px;
+}
+
+.Rouge{
+    background-color: red;
+}
+
+.Vert{
+    background-color: green;
+}
+
+.Bleu{
+    background-color: blue;
+}
