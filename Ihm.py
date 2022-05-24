@@ -22,7 +22,11 @@ def main():
     webServer = WebServer()
     webServer.run_server("0.0.0.0", 80)
     while True :
-        webServer.socketio.emit('ihm', {"test":"cc"} , namespace='/ihm')
+        webServer.socketio.emit('ihm', {"joystick":"N"} , namespace='/ihm')
+        time.sleep(1)
+        webServer.socketio.emit('ihm', {"btn":"Rouge"} , namespace='/ihm')
+        time.sleep(1)
+        webServer.socketio.emit('ihm', {"btn":"Bleu"} , namespace='/ihm')
         time.sleep(1)
 
 if __name__ == "__main__":
