@@ -1,4 +1,7 @@
 from Capteur import Capteur
 
 class Appui (Capteur):
-    pass
+
+    def traduction_IHM(self):
+        valeur = int(self._valeur_voulue)
+        return valeur
