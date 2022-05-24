@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Rolland's hell game</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-        <script type="text/javascript" src="{{ url_for('static', filename='socketio.js') }}"></script>
-        <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
-    </head>
-    <body>
+
+<head>
+    <title>Rolland's hell game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='socketio.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
+</head>
+
+<body>
+    <center>
+        <table width=60%>
+            <tr width=30% height="100px">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr width=30% height="100px">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr width=30% height="50px" border align=center>
+                <td colspan=3>A vous de Jouer !</td>
+            </tr>
+        </table>
         <div class="container">
+
             <div class=""></div>
             <div class=""></div>
             <div class=""></div>
@@ -15,5 +34,6 @@
             <div class=""></div>
             <div class=""></div>
         </div>
-    </body>
+</body>
+
 </html>
