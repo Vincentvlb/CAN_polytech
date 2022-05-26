@@ -3,7 +3,7 @@ from flask_socketio import SocketIO, emit
 import threading
 import time
 
-class WebServer:
+class IHM:
 
     def __init__(self):
         self.__app = Flask("webserver")
@@ -24,44 +24,44 @@ class WebServer:
         pass
 
 def main():
-    webServer = WebServer()
-    webServer.run_server("0.0.0.0", 80)
+    ihm = IHM()
+    ihm.run_server("0.0.0.0", 80)
     while True :
-        webServer.socketio.emit('ihm', {"joystick":"N"} , namespace='/ihm')
+        ihm.socketio.emit('ihm', {"joystick":"N"} , namespace='/ihm')
         time.sleep(1)
-        webServer.socketio.emit('ihm', {"joystick":"S"} , namespace='/ihm')
+        ihm.socketio.emit('ihm', {"joystick":"S"} , namespace='/ihm')
         time.sleep(1)
-        webServer.socketio.emit('ihm', {"joystick":"E"} , namespace='/ihm')
+        ihm.socketio.emit('ihm', {"joystick":"E"} , namespace='/ihm')
         time.sleep(1)
-        webServer.socketio.emit('ihm', {"joystick":"O"} , namespace='/ihm')
+        ihm.socketio.emit('ihm', {"joystick":"O"} , namespace='/ihm')
         time.sleep(1)
-        webServer.socketio.emit('ihm', {"btn":"Jaune"} , namespace='/ihm')
+        ihm.socketio.emit('ihm', {"btn":"Jaune"} , namespace='/ihm')
         time.sleep(1)
-        webServer.socketio.emit('ihm', {"btn":"Vert"} , namespace='/ihm')
+        ihm.socketio.emit('ihm', {"btn":"Vert"} , namespace='/ihm')
         time.sleep(1)
-        webServer.socketio.emit('ihm', {"btn":"Bleu"} , namespace='/ihm')
+        ihm.socketio.emit('ihm', {"btn":"Bleu"} , namespace='/ihm')
         time.sleep(1)
-        webServer.socketio.emit('ihm', {"couleur":"Blanc"} , namespace='/ihm')
+        ihm.socketio.emit('ihm', {"couleur":"Blanc"} , namespace='/ihm')
         time.sleep(1)
-        webServer.socketio.emit('ihm', {"couleur":"Rouge"} , namespace='/ihm')
+        ihm.socketio.emit('ihm', {"couleur":"Rouge"} , namespace='/ihm')
         time.sleep(1)
-        webServer.socketio.emit('ihm', {"couleur":"Vert"} , namespace='/ihm')
+        ihm.socketio.emit('ihm', {"couleur":"Vert"} , namespace='/ihm')
         time.sleep(1)
-        webServer.socketio.emit('ihm', {"couleur":"Bleu"} , namespace='/ihm')
+        ihm.socketio.emit('ihm', {"couleur":"Bleu"} , namespace='/ihm')
         time.sleep(1)
-        webServer.socketio.emit('ihm', {"vitesse":"Lent"} , namespace='/ihm')
+        ihm.socketio.emit('ihm', {"vitesse":"Lent"} , namespace='/ihm')
         time.sleep(1)
-        webServer.socketio.emit('ihm', {"vitesse":"Rapide"} , namespace='/ihm')
+        ihm.socketio.emit('ihm', {"vitesse":"Rapide"} , namespace='/ihm')
         time.sleep(1)
-        webServer.socketio.emit('ihm', {"force":50} , namespace='/ihm')
+        ihm.socketio.emit('ihm', {"force":50} , namespace='/ihm')
         time.sleep(1)
-        webServer.socketio.emit('ihm', {"force":20} , namespace='/ihm')
+        ihm.socketio.emit('ihm', {"force":20} , namespace='/ihm')
         time.sleep(1)
-        webServer.socketio.emit('ihm', {"msg_look":True} , namespace='/ihm')
+        ihm.socketio.emit('ihm', {"msg_look":True} , namespace='/ihm')
         time.sleep(1)
-        webServer.socketio.emit('ihm', {"msg_look":False} , namespace='/ihm')
+        ihm.socketio.emit('ihm', {"msg_look":False} , namespace='/ihm')
         time.sleep(1)
-        webServer.socketio.emit('ihm', {"msg_look":True} , namespace='/ihm')
+        ihm.socketio.emit('ihm', {"msg_look":True} , namespace='/ihm')
         time.sleep(1)
 
 if __name__ == "__main__":
